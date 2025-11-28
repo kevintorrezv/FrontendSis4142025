@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <div class="container">
+    
+    <a [routerLink]="['/']" class="brand">Mi App</a>
+    <ul class="nav-links">
+      <li>
+        <a [routerLink]="['/']" routerLinkActive="active" ariaCurrentWhenActive="page">Inicio</a>
+      </li>
+      <li>
+        <a [routerLink]="['/contactos']" routerLinkActive="active" ariaCurrentWhenActive="page">Contactos</a>
+      </li>
+      <li>
+        <a [routerLink]="['/producto']" routerLinkActive="active" ariaCurrentWhenActive="page">Producto</a>
+      </li>
+      <li>
+        <a [routerLink]="['/fabricantes']" routerLinkActive="active" ariaCurrentWhenActive="page">Fabricantes</a>
+      </li>
+      <!-- Ejemplo con tu componente de página existente -->
+      <li>
+        <a [routerLink]="['/escobas']" routerLinkActive="active" ariaCurrentWhenActive="page">Escobas</a>
+      </li>
+    </ul>
+  </div>
+</nav>

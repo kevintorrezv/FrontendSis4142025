@@ -1,0 +1,91 @@
+<div class="container mt-4">
+  <h2>Catálogo de Escobas</h2>
+  <button class="btn-create" (click)="abrirFormularioCreacion()">Crear Nueva Escoba</button>
+  <hr>
+
+  <!-- -------------------------------------------------- -->
+  <!-- NUEVO: FORMULARIO DE CREACIÓN -->
+  <!-- -------------------------------------------------- -->
+  <div *ngIf="mostrarFormulario" class="form-card">
+    <h3>Nueva Escoba</h3>
+    <form (ngSubmit)="enviarFormularioCreacion()">
+      
+      <!-- Select de Fabricante -->
+      <label for="fabricante">Fabricante:</label>
+      <select id="fabricante" [(ngModel)]="fabricanteSeleccionadoId" name="fabricanteId" required>
+        <option *ngFor="let fab of fabricantesDisponibles" [ngValue]="fab.id">
+          {{ fab.nombre }}
+        </option>
+      </select>
+      
+      <!-- Campos de la Escoba (Usar 'nombre' para el POST) -->
+      <label for="nombre">Nombre/Modelo (POST):</label>
+      <input type="text" id="nombre" [(ngModel)]="nuevaEscoba.nombre" name="nombre" required>
+      
+      <label for="color">Color:</label>
+      <input type="text" id="color" [(ngModel)]="nuevaEscoba.color" name="color" required>
+      
+      <label for="madera">Tipo de Madera:</label>
+      <input type="text" id="madera" [(ngModel)]="nuevaEscoba.tipoDeMadera" name="madera">
+      
+      <label for="longitud">Longitud (Cm):</label>
+      <input type="number" id="longitud" [(ngModel)]="nuevaEscoba.longitudCm" name="longitudCm">
+      
+      <label for="uso">Uso Recomendado:</label>
+      <input type="text" id="uso" [(ngModel)]="nuevaEscoba.usoRecomendado" name="uso">
+
+      <button type="submit" class="btn-submit">Guardar Escoba</button>
+      <button type="button" class="btn-cancel" (click)="cerrarFormularioCreacion()">Cancelar</button>
+    </form>
+    <hr>
+  </div>
+  <div *ngIf="escobaEnEdicion" class="form-card form-edit">
+    <h3>Editar Escoba (ID: {{ escobaEnEdicion.id }})</h3>
+    <form (ngSubmit)="enviarFormularioEdicion()">
+      
+      <label>Modelo:</label>
+      <input type="text" [(ngModel)]="escobaEnEdicion.modelo" name="modelo" required>
+      
+      <label>Color:</label>
+      <input type="text" [(ngModel)]="escobaEnEdicion.color" name="color">
+      
+      <!-- ... (Otros campos que desees editar: longitudCm, usoRecomendado, etc.) ... -->
+
+      <button type="submit" class="btn-submit">Guardar Cambios</button>
+      <button type="button" class="btn-cancel" (click)="cerrarFormularioEdicion()">Cancelar</button>
+    </form>
+    <hr>
+</div>
+  <!-- -------------------------------------------------- -->
+  
+  <!-- Mensajes de estado -->
+  <div *ngIf="cargando" class="no-data-message">Cargando escobas...</div>
+  <div *ngIf="error" class="error-message">Error: {{ error }}</div>
+
+  <!-- APLICACIÓN DE ESTILO GRID Y CARD -->
+  <div *ngIf="!cargando && escobas.length > 0" class="data-grid">
+    <div *ngFor="let escoba of escobas" class="data-card">
+      
+      <!-- Botón de Eliminar -->
+      <button class="btn-delete" (click)="eliminarEscoba(escoba.id)">Eliminar</button>
+
+        <i class="fas fa-broom item-icon"></i> 
+
+      <!-- Contenido de la tarjeta (Usar 'modelo' para la salida) -->
+      <h4>Modelo: <strong>{{ escoba.modelo || escoba.nombre || 'Modelo NO Definido' }}</strong></h4> 
+      
+      <hr>
+      <p>Color: {{ escoba.color }}</p>
+      <p>Tipo de Madera: {{ escoba.tipoDeMadera }}</p>
+      <p>Uso: {{ escoba.usoRecomendado }}</p>
+      <p>Longitud: {{ escoba.longitudCm }} cm</p>
+      <div class="crud-buttons">
+        <button class="btn-edit" (click)="abrirFormularioEdicion(escoba)">Editar</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!cargando && escobas.length === 0 && !error" class="no-data-message">
+    <p>No se encontraron escobas.</p>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<!-- src/app/pages/home/home.component.html -->
+
+<div class="container main-home-container">
+    
+    <!-- 1. BANNER PRINCIPAL (Banner Limpio) -->
+    <section class="home-hero-banner">
+        <h1>Bienvenidos a Mi App de Escobas</h1>
+        <p>Tu catálogo de productos de limpieza y fabricación de alta calidad.</p>
+        <a class="btn-primary" [routerLink]="['/producto']">Ver Catálogo Completo</a>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- 2. SECCIÓN DE DESTACADOS (3 Columnas con datos simulados) -->
+    <h2>Productos Destacados</h2>
+    <div class="highlight-grid">
+        
+        <!-- Tarjeta de Destacado 1 (Escoba) -->
+        <div class="highlight-card">
+            <i class="fas fa-broom card-icon escoba-icon"></i> 
+            <h3>Máxima Durabilidad X-500</h3>
+            <p>Ideal para uso industrial y grandes superficies.</p>
+            <span class="tag-new">¡Nuevo!</span>
+        </div>
+        
+        <!-- Tarjeta de Destacado 2 (Fabricante) -->
+        <div class="highlight-card">
+             <i class="fas fa-industry card-icon fabricante-icon"></i>
+            <h3>Fabricantes Destacados</h3>
+            <p>Conoce a los creadores de nuestros mejores productos.</p>
+            <a class="btn-secondary" [routerLink]="['/fabricantes']">Ver Fabricantes</a>
+        </div>
+        
+        <!-- Tarjeta de Destacado 3 (Oferta) -->
+        <div class="highlight-card">
+            <i class="fas fa-tags card-icon oferta-icon"></i>
+            <h3>Ofertas del Mes</h3>
+            <p>Grandes descuentos en productos seleccionados.</p>
+            <span class="tag-sale">¡50% OFF!</span>
+        </div>
+
+    </div>
+
+</div>
