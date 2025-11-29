@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 // La URL Base de tu Backend
-const API_URL = 'https://backendsis414-production.up.railway.app/api'; 
+const API_URL = 'https://semihumanized-stoopingly-emerald.ngrok-free.dev/api'; 
 
 // --- Interfaces del Backend ---
 export interface Escoba { 

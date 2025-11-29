@@ -63,7 +63,7 @@ export class EscobasComponent implements OnInit {
     abrirFormularioEdicion(escoba: Escoba): void {
         // Clonar el objeto para que los cambios en el formulario no afecten la lista
         this.escobaEnEdicion = { ...escoba }; 
-        this.mostrarFormulario = true; // Reutiliza el flag de "Crear" si no quieres un formulario modal separado
+        this.mostrarFormulario = false; // Reutiliza el flag de "Crear" si no quieres un formulario modal separado
     }
 
     // Lógica para CERRAR el Formulario de Edición
