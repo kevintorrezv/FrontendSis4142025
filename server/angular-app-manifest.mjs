@@ -7,39 +7,39 @@ export default {
   routes: [
   {
     "renderMode": 2,
-    "route": "/FrontendSis4142025"
+    "route": "/"
   },
   {
     "renderMode": 2,
-    "route": "/FrontendSis4142025/contactos"
+    "route": "/contactos"
   },
   {
     "renderMode": 2,
-    "route": "/FrontendSis4142025/producto"
+    "route": "/producto"
   },
   {
     "renderMode": 2,
-    "route": "/FrontendSis4142025/fabricantes"
+    "route": "/fabricantes"
   },
   {
     "renderMode": 2,
-    "route": "/FrontendSis4142025/escobas"
+    "route": "/escobas"
   },
   {
     "renderMode": 2,
-    "redirectTo": "/FrontendSis4142025",
-    "route": "/FrontendSis4142025/**"
+    "redirectTo": "/",
+    "route": "/**"
   }
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 727, hash: '1808332058d32590a13c3425771d2dce3ac8556e1b30b4566e1240511f695d29', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1129, hash: '00ff03af251b7ac11aec940842ebd02a350606cab7ea56bef77a386f2e72ddc6', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'FrontendSis4142025/index.html': {size: 9025, hash: 'f82fbec92baab71ad3857fb0f98415a6fda4d3f167e9469b3b7dfc729de29bd9', text: () => import('./assets-chunks/FrontendSis4142025_index_html.mjs').then(m => m.default)},
-    'FrontendSis4142025/contactos/index.html': {size: 6814, hash: '9aee8755da29fda4b107d6d9d716f5433b18f6971fc1a8856066038bb84864c8', text: () => import('./assets-chunks/FrontendSis4142025_contactos_index_html.mjs').then(m => m.default)},
-    'FrontendSis4142025/escobas/index.html': {size: 5672, hash: 'c00727a92db73399abe08b3cbdd507dc1a062f9cc6d7cfc37354526f77b06ebb', text: () => import('./assets-chunks/FrontendSis4142025_escobas_index_html.mjs').then(m => m.default)},
-    'FrontendSis4142025/fabricantes/index.html': {size: 8714, hash: '71dce68d1c8836f7e6a11815863d80381f51698fc3cbf351fd0c661a8a7564d9', text: () => import('./assets-chunks/FrontendSis4142025_fabricantes_index_html.mjs').then(m => m.default)},
-    'FrontendSis4142025/producto/index.html': {size: 4866, hash: 'df5010100b3926ddc006bb52274a57569f72bf5e52b2b7f1cdd2c73118a08b47', text: () => import('./assets-chunks/FrontendSis4142025_producto_index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 708, hash: 'd507c58661f3a1fa13de396faf0a3ac9b524f46d5d0f7c8db732c788a8f47c81', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 1110, hash: 'e6c1f0f29e4dbea9706732f9d944a1437f349a6c8e82a04168911c63a8634cea', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'index.html': {size: 8854, hash: '631b9eecf43648670664c20755d9dc4a405c4213b6ed485a6b4203f4790b0ceb', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'contactos/index.html': {size: 6681, hash: '548e021245f4ccb237cc3b967109e39e73739cfaacc6150cd885b867c87ac967', text: () => import('./assets-chunks/contactos_index_html.mjs').then(m => m.default)},
+    'fabricantes/index.html': {size: 8581, hash: 'b1576347aadd11f4f856fef352e92a3db6eccb60a5c516f17a9c812d2bcfe3e3', text: () => import('./assets-chunks/fabricantes_index_html.mjs').then(m => m.default)},
+    'producto/index.html': {size: 4733, hash: '248fd9016f8675bb08d99499faacdd1211a759c4418a67e887206bd0637c0866', text: () => import('./assets-chunks/producto_index_html.mjs').then(m => m.default)},
+    'escobas/index.html': {size: 5539, hash: '77c2458d05f9850135fa4a7beb4e87ad80a2ae76055929126db272fcc8765885', text: () => import('./assets-chunks/escobas_index_html.mjs').then(m => m.default)},
     'styles-ONMZYPPO.css': {size: 2273, hash: '5rtboTbIZT8', text: () => import('./assets-chunks/styles-ONMZYPPO_css.mjs').then(m => m.default)}
   },
 };
