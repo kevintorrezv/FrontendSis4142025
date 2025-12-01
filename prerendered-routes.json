@@ -1,9 +1,0 @@
-{
-  "routes": {
-    "/": {},
-    "/contactos": {},
-    "/escobas": {},
-    "/fabricantes": {},
-    "/producto": {}
-  }
-}
