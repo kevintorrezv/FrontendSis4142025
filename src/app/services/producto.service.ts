@@ -14,7 +14,7 @@ export interface Escoba {
   tipoDeMadera: string;
   longitudCm: number; // Propiedad faltante 1 (es un número, según el esquema)
   usoRecomendado: string; // Propiedad faltante 2
-  fabricante: Fabricante; // Si quieres incluir el objeto Fabricante relacionado
+  //fabricante: Fabricante; // Si quieres incluir el objeto Fabricante relacionado
 }
 
 export interface Fabricante { 
